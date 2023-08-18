@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: gray;
+}
+
+.dropdown-toggle::after {
+  content: url("../img/arrow-icon.svg");
+  border: none;
+  vertical-align: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dropdown-toggle.show::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: block;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: transform 0.2s ease-in-out;
+  border: none;
+}
+
+.dropdown-menu.show {
+  transform: scaleY(100%);
+}
+
+.nav-item .nav-link {
+  color: #111;
+}
+.nav-item .bi {
+  display: block;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */

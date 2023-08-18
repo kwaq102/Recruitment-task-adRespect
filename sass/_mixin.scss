@@ -1,0 +1,10 @@
+@use "vars" as *;
+
+@mixin link-item {
+	color: $text-color;
+	font-family: $text-font, sans-serif;
+
+	&:hover {
+		color: $main-color;
+	}
+}

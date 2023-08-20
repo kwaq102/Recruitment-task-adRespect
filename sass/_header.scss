@@ -1,0 +1,149 @@
+@use "vars" as *;
+
+.header {
+	.container-fluid {
+		position: relative;
+		padding: 0;
+		overflow: hidden;
+
+		.container {
+			height: 90vh;
+			background-image: url("../img/photo-header3.jpeg");
+			background-size: cover;
+			background-position: center;
+
+			.hero-block-content {
+				height: 100%;
+				width: 100%;
+				padding: 4rem;
+				background-color: rgba(0, 0, 0, 0.5);
+
+				h1 {
+					font-size: 3rem;
+					color: $secondary-color;
+					font-family: "Montserrat", sans-serif;
+					font-weight: 500;
+					line-height: 40px;
+					text-align: center;
+				}
+
+				p {
+					font-size: 1.6rem;
+					line-height: 150%;
+					font-family: "Inter", sans-serif;
+					color: $secondary-color;
+				}
+
+				.wrapper-hero-buttons {
+					gap: 1rem;
+					margin-bottom: 40px;
+
+					.btn {
+						padding: 1.2rem 2.4rem;
+						border-radius: 200px;
+						background-color: $main-color;
+						a {
+							color: $secondary-color;
+							font-size: 1.6rem;
+							text-decoration: none;
+
+							img {
+								display: none;
+							}
+						}
+					}
+
+					// TODO dodać hovery na button, jak będzie czas to jakieś ładne, a jak nie to zwykłe
+				}
+			}
+		}
+
+		.hero-block-photo {
+			display: none;
+		}
+	}
+
+	@media (min-width: 992px) {
+		.container-fluid {
+			background-color: #dcc1ab;
+
+			.container {
+				background-image: none;
+
+				.hero-block-content {
+					height: 80%;
+					width: 50%;
+					background-color: transparent;
+
+					h1 {
+						width: 90%;
+						font-size: 6rem;
+						line-height: 7rem;
+						text-align: left;
+						color: $text-color;
+					}
+
+					p {
+						width: 80%;
+						color: $text-color;
+					}
+
+					.wrapper-hero-buttons {
+						gap: 3.6rem;
+						margin-bottom: 0;
+
+						.btn:nth-of-type(2) {
+							border: 1px solid $main-color;
+							background-color: transparent;
+
+							a {
+								display: flex;
+								align-items: center;
+								color: $main-color;
+								gap: 0.8rem;
+
+								span {
+									display: block;
+
+									img {
+										display: block;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.hero-block-photo {
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+
+				img {
+					position: relative;
+					right: 0;
+					top: 0;
+					height: 100%;
+					max-width: 100%;
+					transform-origin: 100% 0;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.container-fluid {
+		.hero-block-photo {
+			img {
+				transform: scale(0.8);
+				transform-origin: 100% 0;
+			}
+
+			img {
+				top: -130px;
+			}
+		}
+	}
+}

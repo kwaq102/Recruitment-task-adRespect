@@ -1,0 +1,48 @@
+@use "vars" as *;
+
+.header {
+	position: relative;
+
+	.buttons-slider-wrapper {
+		position: absolute;
+		bottom: 0;
+		right: 50%;
+		transform: translateX(50%);
+		width: 150px;
+		height: 60px;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		display: flex;
+		justify-content: space-evenly;
+		background-color: $secondary-color;
+		z-index: 10;
+
+		.carousel-control-prev,
+		.carousel-control-next {
+			position: static;
+			width: auto;
+			opacity: 1;
+		}
+
+		.carousel-control-prev-icon,
+		.carousel-control-next-icon {
+			width: 4.8rem;
+			height: 4.8rem;
+			background-image: url("../img/arrow-left-icon.svg");
+			background-size: auto;
+		}
+		.carousel-control-next-icon {
+			transform: rotate(180deg);
+		}
+	}
+
+	@media (min-width: 992px) {
+		.buttons-slider-wrapper {
+			right: 0;
+			transform: translateX(0%);
+			width: 200px;
+			height: 90px;
+			border-radius: 0;
+		}
+	}
+}

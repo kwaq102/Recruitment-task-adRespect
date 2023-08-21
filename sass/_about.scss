@@ -1,0 +1,100 @@
+@use "vars" as *;
+@use "mixin" as *;
+
+.about {
+	.about-wrapper {
+		position: relative;
+
+		.about-photo {
+			height: 720px;
+			background-image: url("/img/house2.jpg");
+			background-attachment: fixed;
+			background-position: top center;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.about-content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			gap: 4rem;
+			background-color: rgba(0, 0, 0, 0.5);
+
+			h2 {
+				@include section-heading();
+			}
+
+			h3 {
+				@include section-second-heading();
+			}
+
+			p {
+				@include text();
+				text-shadow: 1px 1px 1px $text-color;
+			}
+
+			// TODO Button hover
+			button {
+				@include btn-oval();
+				width: 75%;
+				border: 1px solid $secondary-color;
+
+				a {
+					color: $secondary-color;
+					font-size: 1.6rem;
+					text-decoration: none;
+
+					span {
+						margin-left: 8px;
+					}
+				}
+			}
+
+			h2,
+			h3,
+			p {
+				color: $secondary-color;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.about {
+		background-color: $main-color;
+		.about-wrapper {
+			position: static;
+			height: 720px;
+			gap: 6.4rem;
+
+			.about-photo {
+				background-position: left top;
+				background-size: contain;
+			}
+
+			.about-content {
+				position: static;
+				background-color: transparent;
+
+				button {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.about {
+		.about-wrapper {
+			.about-content {
+				padding-left: 9.6rem !important;
+
+				p {
+					width: 80%;
+				}
+			}
+		}
+	}
+}

@@ -9,5 +9,9 @@
 :root {
 	height: 250vh;
 	font-size: 10px;
-	font-family: $text-font sans-serif;
+	font-family: $text-font, sans-serif;
+}
+
+body {
+	background-color: $secondary-color;
 }

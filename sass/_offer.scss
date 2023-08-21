@@ -1,0 +1,94 @@
+@use "vars" as *;
+@use "mixin" as *;
+
+.offer {
+	margin-top: 6rem;
+	margin-bottom: 8rem;
+	.offer-wrapper {
+		.offer-content {
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			margin-bottom: 5rem;
+			gap: 1.6rem;
+
+			h2 {
+				@include section-heading();
+			}
+
+			h3 {
+				@include section-second-heading();
+			}
+
+			p {
+				@include text();
+				letter-spacing: -0.16px;
+				font-family: "Inter", sans-serif;
+				text-align: justify;
+			}
+		}
+
+		.offer-cards {
+			gap: 6.4rem;
+
+			div.card {
+				max-width: 378px;
+				height: 370px;
+				padding: 48px 40px;
+				border-radius: 28px;
+				border: none;
+				gap: 32px;
+				background-color: #fff;
+
+				img {
+					width: 40px;
+				}
+
+				.text-card {
+					h4 {
+						@include card-heading();
+					}
+
+					p {
+						@include text;
+						font-size: 1.3rem;
+						letter-spacing: -0.14px;
+					}
+				}
+
+				button {
+					margin-top: auto;
+					border: none;
+					background-color: transparent;
+
+					a {
+						margin-right: 10px;
+						border-bottom: 1px solid $main-color;
+						color: $main-color;
+						font-size: 1.6rem;
+						font-family: "Inter", sans-serif;
+						text-decoration: none;
+						line-height: 150%;
+
+						img {
+							display: inline-block;
+							transform: rotate(-90deg);
+							width: 1.6rem;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.offer {
+		margin-top: 12rem;
+		margin-bottom: 16rem;
+
+		.offer-wrapper {
+			gap: 9.6rem;
+		}
+	}
+}

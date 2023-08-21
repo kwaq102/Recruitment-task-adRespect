@@ -1,4 +1,5 @@
 @use "vars" as *;
+@use "mixin" as *;
 
 .header {
 	.container-fluid {
@@ -28,9 +29,7 @@
 				}
 
 				p {
-					font-size: 1.6rem;
-					line-height: 150%;
-					font-family: "Inter", sans-serif;
+					@include text();
 					color: $secondary-color;
 				}
 

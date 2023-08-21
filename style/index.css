@@ -7,7 +7,11 @@
 :root {
   height: 250vh;
   font-size: 10px;
-  font-family: "Inter" sans-serif;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f5f0ec;
 }
 
 nav {
@@ -114,6 +118,7 @@ nav .navbar-nav .nav-item form .search.active {
 .header .container-fluid .container .hero-block-content p {
   font-size: 1.6rem;
   line-height: 150%;
+  color: #111;
   font-family: "Inter", sans-serif;
   color: #f5f0ec;
 }
@@ -245,5 +250,113 @@ nav .navbar-nav .nav-item form .search.active {
     width: 200px;
     height: 90px;
     border-radius: 0;
+  }
+}
+
+.offer {
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+}
+.offer .offer-wrapper .offer-content {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 5rem;
+  gap: 1.6rem;
+}
+.offer .offer-wrapper .offer-content h2 {
+  color: #1b5b31;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.12px;
+}
+.offer .offer-wrapper .offer-content h3 {
+  color: #111;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -1.44px;
+}
+.offer .offer-wrapper .offer-content h3 span {
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .offer .offer-wrapper .offer-content h3 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .offer .offer-wrapper .offer-content h3 {
+    font-size: 4.8rem;
+  }
+}
+.offer .offer-wrapper .offer-content p {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #111;
+  font-family: "Inter", sans-serif;
+  letter-spacing: -0.16px;
+  font-family: "Inter", sans-serif;
+  text-align: justify;
+}
+.offer .offer-wrapper .offer-cards {
+  gap: 6.4rem;
+}
+.offer .offer-wrapper .offer-cards div.card {
+  max-width: 378px;
+  height: 370px;
+  padding: 48px 40px;
+  border-radius: 28px;
+  border: none;
+  gap: 32px;
+  background-color: #fff;
+}
+.offer .offer-wrapper .offer-cards div.card img {
+  width: 40px;
+}
+.offer .offer-wrapper .offer-cards div.card .text-card h4 {
+  font-family: Montserrat;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -1.4px;
+}
+.offer .offer-wrapper .offer-cards div.card .text-card p {
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #111;
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: -0.14px;
+}
+.offer .offer-wrapper .offer-cards div.card button {
+  margin-top: auto;
+  border: none;
+  background-color: transparent;
+}
+.offer .offer-wrapper .offer-cards div.card button a {
+  margin-right: 10px;
+  border-bottom: 1px solid #1b5b31;
+  color: #1b5b31;
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  line-height: 150%;
+}
+.offer .offer-wrapper .offer-cards div.card button a img {
+  display: inline-block;
+  transform: rotate(-90deg);
+  width: 1.6rem;
+}
+
+@media (min-width: 992px) {
+  .offer {
+    margin-top: 12rem;
+    margin-bottom: 16rem;
+  }
+  .offer .offer-wrapper {
+    gap: 9.6rem;
   }
 }/*# sourceMappingURL=index.css.map */

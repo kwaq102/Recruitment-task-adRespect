@@ -266,7 +266,7 @@ nav .navbar-nav .nav-item form .search.active {
   display: flex;
   flex-direction: column;
   width: 90%;
-  margin-bottom: 5rem;
+  margin: 0 auto 5rem 0;
   gap: 1.6rem;
 }
 .offer .offer-wrapper .offer-content h2 {
@@ -483,5 +483,93 @@ nav .navbar-nav .nav-item form .search.active {
   }
   .about .about-wrapper .about-content p {
     width: 80%;
+  }
+}
+.projects {
+  background-color: #dcc1ab;
+  padding-bottom: 4.4rem;
+}
+.projects .projects-content {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+}
+.projects .projects-content h2 {
+  color: #1b5b31;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.12px;
+}
+.projects .projects-content h3 {
+  color: #111;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 115%;
+  letter-spacing: -1.44px;
+}
+.projects .projects-content h3 span {
+  display: block;
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .projects .projects-content h3 {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .projects .projects-content h3 {
+    font-size: 4.8rem;
+  }
+}
+.projects .projects-content h3 span {
+  display: inline-block;
+}
+.projects .wrapper-gallery {
+  position: relative;
+}
+.projects .wrapper-gallery .bg-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1000px;
+  width: 100%;
+}
+.projects .wrapper-gallery .bg-gradient .opacity {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, #dcc1ab 0%, rgba(214, 183, 158, 0) 100%);
+  z-index: 2;
+}
+.projects .wrapper-gallery button {
+  padding: 1.2rem 2.4rem;
+  border-radius: 200px;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #111;
+  font-size: 1.6rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+.projects .wrapper-gallery button span {
+  display: block;
+}
+.projects .wrapper-gallery button span img {
+  display: block;
+  margin-left: 8px;
+}
+
+@media (min-width: 992px) {
+  .projects {
+    background-color: #dcc1ab;
+  }
+  .projects .projects-content {
+    padding-top: 12rem;
+    padding-bottom: 16rem;
   }
 }/*# sourceMappingURL=index.css.map */

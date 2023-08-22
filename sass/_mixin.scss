@@ -55,7 +55,27 @@
 	letter-spacing: -1.4px;
 }
 
-@mixin btn-oval() {
+@mixin btn-oval {
 	padding: 1.2rem 2.4rem;
 	border-radius: 200px;
+}
+
+@mixin margin-section {
+	margin-top: 6rem;
+	margin-bottom: 8rem;
+}
+
+@mixin margin-section-desctop {
+	margin-top: 12rem;
+	margin-bottom: 16rem;
+}
+
+@mixin padding-section {
+	padding-top: 6rem;
+	padding-bottom: 8rem;
+}
+
+@mixin padding-section-desctop {
+	padding-top: 12rem;
+	padding-bottom: 16rem;
 }

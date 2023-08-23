@@ -5,6 +5,15 @@ loupe.addEventListener("click", () => {
 	searchInput.classList.toggle("active");
 });
 
+// navigation
+const nav = document.querySelector(".navbar-collapse");
+
+document.addEventListener("click", () => {
+	if (nav.classList.contains("show")) {
+		nav.classList.remove("show");
+	}
+});
+
 // gallery
 
 const masonry = new Macy({
@@ -20,18 +29,3 @@ const masonry = new Macy({
 		y: 30,
 	},
 });
-
-// gridGallery({
-// 	// gallery selector
-// 	selector: "#mSelector",
-// 	// enable dark mode
-// 	darkMode: true,
-// 	// or "horizontal"
-// 	layout: "square",
-// 	// space between images
-// 	gapLength: 4,
-// 	// row height
-// 	rowHeight: 180,
-// 	// column width
-// 	columnWidth: 200,
-// });

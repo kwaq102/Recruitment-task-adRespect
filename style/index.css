@@ -11,7 +11,17 @@
 }
 
 body {
+  scroll-behavior: smooth;
   background-color: #f5f0ec;
+}
+
+[id] {
+  scroll-margin-top: 48px;
+}
+@media (min-width: 992px) {
+  [id] {
+    scroll-margin-top: 54px;
+  }
 }
 
 nav {

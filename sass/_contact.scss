@@ -37,12 +37,32 @@
 		button {
 			@include btn-oval();
 			background-color: $secondary-color;
+			position: relative;
+			overflow: hidden;
 
 			a {
 				padding: 1rem 1.2rem;
 				color: $main-color;
 				font-size: 1.6rem;
 				text-decoration: none;
+			}
+
+			&::before {
+				@include btn-before();
+				background-color: $main-color;
+				transform: scaleY(0);
+				transition: transform 0.5s linear;
+				transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+			}
+
+			&:hover {
+				a {
+					position: relative;
+					color: $secondary-color;
+				}
+				&::before {
+					transform: scaleY(1);
+				}
 			}
 		}
 	}

@@ -29,10 +29,31 @@ footer {
 					}
 					button {
 						@include btn-oval();
+						position: relative;
 						width: 100%;
 						font-size: 1.6rem;
 						background-color: $main-color;
 						color: $secondary-color;
+						overflow: hidden;
+
+						&::before {
+							@include btn-before();
+							background-color: $secondary-color;
+							transform: scaleX(0);
+							transition: transform 0.5s linear;
+							transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+						}
+
+						&:hover {
+							span {
+								position: relative;
+								color: $main-color;
+							}
+
+							&::before {
+								transform: scaleX(1);
+							}
+						}
 					}
 				}
 			}
@@ -78,9 +99,6 @@ footer {
 				color: $secondary-color;
 				letter-spacing: -0.16px;
 
-				img {
-				}
-
 				&:nth-child(2) {
 					text-align: center;
 				}
@@ -97,10 +115,7 @@ footer {
 
 				.footer-content-top {
 					width: 100%;
-					.logo {
-						img {
-						}
-					}
+
 					.footer-contact {
 						gap: 2.4rem;
 						p {
@@ -112,25 +127,13 @@ footer {
 					}
 				}
 
-				.divider {
-				}
-
 				.footer-content-bottom {
 					.media-list {
 						gap: 4.8rem;
-						li {
-							a {
-							}
-						}
 					}
 
 					.footer-contact {
 						gap: 4.8rem;
-
-						p {
-							a {
-							}
-						}
 					}
 				}
 			}

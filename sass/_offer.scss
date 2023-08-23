@@ -40,6 +40,8 @@
 				gap: 32px;
 				background-color: #fff;
 
+				transition: transform 0.3s ease-in-out;
+
 				img {
 					width: 40px;
 				}
@@ -60,9 +62,9 @@
 					margin-top: auto;
 					border: none;
 					background-color: transparent;
+					transition: transform 0.3s ease-in-out;
 
 					a {
-						margin-right: 10px;
 						border-bottom: 1px solid $main-color;
 						color: $main-color;
 						font-size: 1.6rem;
@@ -72,8 +74,23 @@
 
 						img {
 							display: inline-block;
+							margin-left: 1rem;
 							transform: rotate(-90deg);
 							width: 1.6rem;
+							transition: margin 0.3s ease-in-out;
+						}
+					}
+				}
+
+				&:hover {
+					transform: translateY(-20px);
+					box-shadow: 1px 8px 5px rgba(0, 0, 0, 0.2);
+
+					button {
+						a {
+							img {
+								margin-left: 1.6rem;
+							}
 						}
 					}
 				}

@@ -40,18 +40,29 @@
 					.btn {
 						@include btn-oval();
 						background-color: $main-color;
+						transition: background-color 0.3s ease-in-out,
+							border 0.3s ease-in-out;
+
 						a {
 							color: $secondary-color;
 							font-size: 1.6rem;
 							text-decoration: none;
+							transition: color 0.3s ease-in-out;
 
 							img {
 								display: none;
 							}
 						}
-					}
 
-					// TODO dodać hovery na button, jak będzie czas to jakieś ładne, a jak nie to zwykłe
+						&:hover {
+							border: 1px solid $main-color;
+							background-color: $beige-color;
+
+							a {
+								color: $main-color;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -108,6 +119,12 @@
 									}
 								}
 							}
+
+							&:hover {
+								img {
+									animation: arrowAnimation 0.7s ease-out;
+								}
+							}
 						}
 					}
 				}
@@ -143,5 +160,35 @@
 				top: -130px;
 			}
 		}
+	}
+}
+
+@keyframes arrowAnimation {
+	0% {
+		transform: translateY(0);
+	}
+
+	10% {
+		transform: translateY(-3px);
+	}
+
+	30% {
+		transform: translateY(7px);
+	}
+
+	50% {
+		transform: translateY(-1px);
+	}
+
+	70% {
+		transform: translateY(4px);
+	}
+
+	90% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(0);
 	}
 }

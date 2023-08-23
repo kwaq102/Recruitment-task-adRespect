@@ -135,14 +135,23 @@ nav .navbar-nav .nav-item form .search.active {
   padding: 1.2rem 2.4rem;
   border-radius: 200px;
   background-color: #1b5b31;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 .header .container-fluid .container .hero-block-content .wrapper-hero-buttons .btn a {
   color: #f5f0ec;
   font-size: 1.6rem;
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 .header .container-fluid .container .hero-block-content .wrapper-hero-buttons .btn a img {
   display: none;
+}
+.header .container-fluid .container .hero-block-content .wrapper-hero-buttons .btn:hover {
+  border: 1px solid #1b5b31;
+  background-color: #dcc1ab;
+}
+.header .container-fluid .container .hero-block-content .wrapper-hero-buttons .btn:hover a {
+  color: #1b5b31;
 }
 .header .container-fluid .hero-block-photo {
   display: none;
@@ -190,6 +199,9 @@ nav .navbar-nav .nav-item form .search.active {
   .header .container-fluid .container .hero-block-content .wrapper-hero-buttons .btn:nth-of-type(2) a span img {
     display: block;
   }
+  .header .container-fluid .container .hero-block-content .wrapper-hero-buttons .btn:nth-of-type(2):hover img {
+    animation: arrowAnimation 0.7s ease-out;
+  }
   .header .container-fluid .hero-block-photo {
     display: block;
     position: absolute;
@@ -213,6 +225,29 @@ nav .navbar-nav .nav-item form .search.active {
   }
   .container-fluid .hero-block-photo img {
     top: -130px;
+  }
+}
+@keyframes arrowAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-3px);
+  }
+  30% {
+    transform: translateY(7px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+  70% {
+    transform: translateY(4px);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 .header {
@@ -323,6 +358,7 @@ nav .navbar-nav .nav-item form .search.active {
   border: none;
   gap: 32px;
   background-color: #fff;
+  transition: transform 0.3s ease-in-out;
 }
 .offer .offer-wrapper .offer-cards div.card img {
   width: 40px;
@@ -351,9 +387,9 @@ nav .navbar-nav .nav-item form .search.active {
   margin-top: auto;
   border: none;
   background-color: transparent;
+  transition: transform 0.3s ease-in-out;
 }
 .offer .offer-wrapper .offer-cards div.card button a {
-  margin-right: 10px;
   border-bottom: 1px solid #1b5b31;
   color: #1b5b31;
   font-size: 1.6rem;
@@ -363,8 +399,17 @@ nav .navbar-nav .nav-item form .search.active {
 }
 .offer .offer-wrapper .offer-cards div.card button a img {
   display: inline-block;
+  margin-left: 1rem;
   transform: rotate(-90deg);
   width: 1.6rem;
+  transition: margin 0.3s ease-in-out;
+}
+.offer .offer-wrapper .offer-cards div.card:hover {
+  transform: translateY(-20px);
+  box-shadow: 1px 8px 5px rgba(0, 0, 0, 0.2);
+}
+.offer .offer-wrapper .offer-cards div.card:hover button a img {
+  margin-left: 1.6rem;
 }
 
 @media (min-width: 992px) {
@@ -439,8 +484,11 @@ nav .navbar-nav .nav-item form .search.active {
 .about .about-wrapper .about-content button {
   padding: 1.2rem 2.4rem;
   border-radius: 200px;
+  position: relative;
   width: 75%;
+  background: transparent;
   border: 1px solid #f5f0ec;
+  overflow: hidden;
 }
 .about .about-wrapper .about-content button a {
   color: #f5f0ec;
@@ -449,6 +497,26 @@ nav .navbar-nav .nav-item form .search.active {
 }
 .about .about-wrapper .about-content button a span {
   margin-left: 8px;
+}
+.about .about-wrapper .about-content button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  background-color: #f5f0ec;
+  transition: transform 0.5s linear;
+  transform: scaleX(0);
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.about .about-wrapper .about-content button:hover a {
+  position: relative;
+  color: #1b5b31;
+}
+.about .about-wrapper .about-content button:hover::before {
+  transform: scaleX(1);
 }
 .about .about-wrapper .about-content h2,
 .about .about-wrapper .about-content h3,
@@ -630,12 +698,34 @@ nav .navbar-nav .nav-item form .search.active {
   padding: 1.2rem 2.4rem;
   border-radius: 200px;
   background-color: #f5f0ec;
+  position: relative;
+  overflow: hidden;
 }
 .contact .instagram button a {
   padding: 1rem 1.2rem;
   color: #1b5b31;
   font-size: 1.6rem;
   text-decoration: none;
+}
+.contact .instagram button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  background-color: #1b5b31;
+  transform: scaleY(0);
+  transition: transform 0.5s linear;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+.contact .instagram button:hover a {
+  position: relative;
+  color: #f5f0ec;
+}
+.contact .instagram button:hover::before {
+  transform: scaleY(1);
 }
 
 @media (min-width: 992px) {
@@ -688,10 +778,32 @@ footer .footer-box .footer-content .footer-content-top .footer-contact p {
 footer .footer-box .footer-content .footer-content-top .footer-contact button {
   padding: 1.2rem 2.4rem;
   border-radius: 200px;
+  position: relative;
   width: 100%;
   font-size: 1.6rem;
   background-color: #1b5b31;
   color: #f5f0ec;
+  overflow: hidden;
+}
+footer .footer-box .footer-content .footer-content-top .footer-contact button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 0 0;
+  background-color: #f5f0ec;
+  transform: scaleX(0);
+  transition: transform 0.5s linear;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+footer .footer-box .footer-content .footer-content-top .footer-contact button:hover span {
+  position: relative;
+  color: #1b5b31;
+}
+footer .footer-box .footer-content .footer-content-top .footer-contact button:hover::before {
+  transform: scaleX(1);
 }
 footer .footer-box .footer-content .divider {
   width: 100%;

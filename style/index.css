@@ -641,6 +641,9 @@ nav .navbar-nav .nav-item form .search.active {
   display: block;
   margin-left: 8px;
 }
+.projects .wrapper-gallery .disabled {
+  display: none;
+}
 
 @media (min-width: 992px) {
   .projects {
